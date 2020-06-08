@@ -19,7 +19,9 @@ app.use((req, res, next) => {
     next();
 });
 
+
 const port = process.env.PORT || 4000;
 app.listen(port, () => console.log(`Server running on port ${port}`));
 
-app.use('/phones', routes)
+
+app.use('/phones', routes);

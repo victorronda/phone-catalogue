@@ -1,4 +1,4 @@
-import * as types from '../actions/constants';
+import * as types from '../constants/allProductsContants';
 
 const initialStateProducts = {
     phones: [],
@@ -6,10 +6,10 @@ const initialStateProducts = {
     error: ""
 };
 
-export const requestAllProducts = (state = initialStateProducts, action = {}) => {
+const requestAllProducts = (state = initialStateProducts, action = {}) => {
     switch (action.type) {
         case types.REQUEST_PRODUCTS_PENDING:
-            return {...state, isPending:true }
+            return {...state, isPending: true }
         case types.REQUEST_PRODUCTS_SUCCESS:
             return {...state, phones: action.payload, isPending: false }
         case types.REQUEST_PRODUCTS_FAILURE:
@@ -18,3 +18,5 @@ export const requestAllProducts = (state = initialStateProducts, action = {}) =>
             return state;
     }
 };
+
+export default requestAllProducts;

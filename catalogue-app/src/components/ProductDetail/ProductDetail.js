@@ -9,7 +9,7 @@ const ProductDetail = ({ phones, id }) => {
 	return (
 		<div>
 		{phone ? (
-			<div className="container d-flex justify-content-center align-center rounded-lg" >
+			<div className="container d-flex justify-content-center align-center rounded-lg my-3" >
 				<div className="row text-center shadow-lg" >
 					<div className="col-lg-4 col-md-6 col-sm-8 bg-light rounded-lg">
 						<img className="img-fluid" src={phone.imageFileName} alt={phone.name} width="auto"
@@ -39,7 +39,9 @@ const ProductDetail = ({ phones, id }) => {
 				</div>
 				</div>
 			) : (
-				<ClipLoader />
+				<div >
+					<ClipLoader color={"#123abc"}size={250} />
+				</div>
 			)}
 		</div>
 	);

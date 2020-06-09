@@ -19,7 +19,7 @@ const Home = memo(({ phones, isPending, request }) => {
 		<BrowserRouter>
 			<Header />
 			<Switch>
-				<Route exact path="/" render={() => (isPending ? <ClipLoader /> : <ProductList phones={phones} />)} />
+				<Route exact path="/" render={() => (isPending ? <ClipLoader color={"#123abc"} size={250}/> : <ProductList phones={phones} />)} />
 				<Route
 					path="/details/:id"
 					render={(props) => <ProductDetail id={props.match.params.id} phones={phones} />}

@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Product.css';
 
 const Product = ({ phone }) => {
 	return (
-		<div className="card m-4 text-center rounded-lg shadow-lg" style={{width: "15em"}}>
+		<div className="card m-4 text-center rounded-lg shadow-lg hover-card" style={{width: "15em"}}>
 			<Link className="text-decoration-none text-dark" to={`/details/${phone.id}`} phone={phone}>
 				<img className="card-img-top" src={phone.imageFileName} alt="phone" width="auto"
                     height="250"/>

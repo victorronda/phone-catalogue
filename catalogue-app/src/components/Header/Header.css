@@ -1,0 +1,7 @@
+.hover-title{
+    font-size: 20rem;
+}
+
+.hover-title:hover {
+    transform: scale(1.3);
+}

@@ -7,17 +7,19 @@ const ProductDetail = ({ phones, id }) => {
 	const phone = phones.filter((phone) => phone.id === Number(id))[0];
 
 	return (
-		<div className="container d-flex justify-content-center align-center" >
-			{phone ? (
-				<div className="row text-center" >
-					<div className="col-lg-4 col-md-6 col-sm-8 ">
-						<img className="img-fluid img-detail" src={phone.imageFileName} alt={phone.name} />
+		<div>
+		{phone ? (
+			<div className="container d-flex justify-content-center align-center rounded-lg" >
+				<div className="row text-center shadow-lg" >
+					<div className="col-lg-4 col-md-6 col-sm-8 bg-light rounded-lg">
+						<img className="img-fluid" src={phone.imageFileName} alt={phone.name} width="auto"
+                    height="auto"/>
 					</div>
-					<div className="card col-lg-8 col-md-6 col-sm-8 ">
-						<h1 className="">{phone.name}</h1>
-						<h4 className="">{phone.price}€</h4>
+					<div className="card col-lg-8 col-md-6 col-sm-8 pt-3">
+						<h1 className="mb-3 mt-3">{phone.name}</h1>
+						<h3 className="mb-4 mt-2">{phone.price}€</h3>
 						<h5>Technical specifications</h5>
-						<p className=""> 
+						<p className="mt-2"> 
 							<b>Manufacturer: </b> {phone.manufacturer}
 						</p>
 						<p className="">
@@ -31,10 +33,10 @@ const ProductDetail = ({ phones, id }) => {
 						</p>
 						<hr/>
 						<h5>Description</h5>
-						<p>{phone.description}</p>
-
-						<Link to="/">Go back</Link>
+						<p className="mt-2">{phone.description}</p>
+						<Link className="btn btn-info w-25 mx-auto my-3" to="/">Go back</Link>
 					</div>
+				</div>
 				</div>
 			) : (
 				<ClipLoader />

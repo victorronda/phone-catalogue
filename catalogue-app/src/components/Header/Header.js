@@ -4,11 +4,9 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
 	return (
-		<Link className="text-decoration-none" to="/">
+		<Link className="text-decoration-none hover-title" to="/">
 			<div className="d-flex justify-content-center py-2 my-2 text-light mx-auto">
-				<h1 className="d-inline">Phone catalogue
-                <span role="img" aria-label="phone">📱</span>
-				</h1>
+				<h1>Phone catalogue</h1>
 			</div>
 		</Link>
 	);

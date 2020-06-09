@@ -6,11 +6,9 @@
 }
 
 body{
-  background-image: url('./assets/space-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: rgb(147,150,190);
   height: 100%;
+  background-size: cover;
 }
 
 .phones-images {

@@ -1,4 +1,4 @@
-import * as types from '../constants/allProductsContants';
+import * as types from '../constants/constants';
 import axios from 'axios';
 
 

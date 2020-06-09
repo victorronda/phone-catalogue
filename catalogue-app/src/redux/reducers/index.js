@@ -1,5 +1,5 @@
 import { combineReducers} from 'redux';
-import requestAllProducts from './allProductsReducer'
+import requestAllProducts from './reducer'
 
 
 const rootReducer = combineReducers({ requestAllProducts });

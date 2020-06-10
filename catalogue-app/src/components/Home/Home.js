@@ -2,7 +2,6 @@ import React, { useEffect, memo } from 'react';
 import { connect } from 'react-redux';
 import { requestAllProducts } from '../../redux/actions/actions';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import ClipLoader from 'react-spinners/ClipLoader';
 import Header from '../Header/Header';
 import ProductList from '../ProductList/ProductList';
 import ProductDetail from '../ProductDetail/ProductDetail';
@@ -19,7 +18,20 @@ const Home = memo(({ phones, isPending, request }) => {
 		<BrowserRouter>
 			<Header />
 			<Switch>
-				<Route exact path="/" render={() => (isPending ? <ClipLoader color={"#123abc"} size={250}/> : <ProductList phones={phones} />)} />
+				<Route
+					exact
+					path="/"
+					render={() =>
+						isPending ? (
+							<div class="d-flex justify-content-center">
+								<div class="spinner-border text-danger" style={{width: "5rem", height: "5rem"}} role="status">
+									<span class="sr-only">Loading...</span>
+								</div>
+							</div>
+						) : (
+							<ProductList phones={phones} />
+						)}
+				/>
 				<Route
 					path="/details/:id"
 					render={(props) => <ProductDetail id={props.match.params.id} phones={phones} />}

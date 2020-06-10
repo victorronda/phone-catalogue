@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-
 const ProductDetail = ({ phones, id }) => {
 	const phone = phones.filter((phone) => phone.id === Number(id))[0];
 

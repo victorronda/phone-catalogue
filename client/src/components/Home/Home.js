@@ -23,9 +23,13 @@ const Home = memo(({ phones, isPending, request }) => {
 					path="/"
 					render={() =>
 						isPending ? (
-							<div class="d-flex justify-content-center">
-								<div class="spinner-border text-danger" style={{width: "5rem", height: "5rem"}} role="status">
-									<span class="sr-only">Loading...</span>
+							<div className="d-flex justify-content-center">
+								<div
+									className="spinner-border text-danger"
+									style={{ width: '5rem', height: '5rem' }}
+									role="status"
+								>
+									<span className="sr-only">Loading...</span>
 								</div>
 							</div>
 						) : (

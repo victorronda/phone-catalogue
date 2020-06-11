@@ -1,0 +1,13 @@
+.hover-title{
+    font-size: 40px;
+    text-shadow: 0.5px 0.5px 1.5px black;
+}
+
+.hover-title:hover {
+    transform: scale(0.97);
+    transition-duration: 500ms;
+    transition-delay: 100ms;
+    color: lightgray;
+}
+
+

@@ -1,7 +1,7 @@
 {
   "name": "phone-catalogue",
   "version": "1.0.0",
-  "description": "Phone catalogue app",
+  "description": "Technical interview",
   "main": "server/app.js",
   "scripts": {
     "server": "nodemon app.js",

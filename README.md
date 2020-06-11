@@ -140,7 +140,6 @@ server/
 First step, install npm on /phone-catalogue:
 
 ```
-cd phone-catalogue
 npm install
 ```
 
@@ -149,7 +148,7 @@ npm install
 Second step, running the server on /server:
 
 ```
-cd phone-catalogue/server
+cd /server
 npm run server
 ```
 
@@ -157,9 +156,14 @@ npm run server
 Last step, running the app on /client:
 
 ```
-cd phone-catalogue/client
+cd /client
 npm start
 ```
 
-
 The application will run on port 3000 and the server port 4000 by default.
+
+For running the tests:
+```
+cd /client
+npm run test
+```

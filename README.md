@@ -145,10 +145,9 @@ npm install
 
 
 
-Second step, running the server on /server:
+Second step, running the server on (no need to get in server folder):
 
 ```
-cd /server
 npm run server
 ```
 

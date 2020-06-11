@@ -6,7 +6,7 @@ const initialStateProducts = {
 	error: ''
 };
 
-const requestAllProducts = (state = initialStateProducts, action = {}) => {
+export const requestAllProducts = (state = initialStateProducts, action = {}) => {
 	switch (action.type) {
 		case types.REQUEST_PRODUCTS_PENDING:
 			return { ...state, isPending: true };
@@ -19,4 +19,4 @@ const requestAllProducts = (state = initialStateProducts, action = {}) => {
 	}
 };
 
-export default requestAllProducts;
+

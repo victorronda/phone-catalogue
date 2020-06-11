@@ -1,4 +1,4 @@
-import React, { useEffect, memo } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { requestAllProducts } from '../../redux/actions/actions';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
@@ -6,7 +6,7 @@ import Header from '../Header/Header';
 import ProductList from '../ProductList/ProductList';
 import ProductDetail from '../ProductDetail/ProductDetail';
 
-const Home = memo(({ phones, isPending, request }) => {
+const Home = ({ phones, isPending, request }) => {
 	useEffect(
 		() => {
 			request();
@@ -43,7 +43,7 @@ const Home = memo(({ phones, isPending, request }) => {
 			</Switch>
 		</BrowserRouter>
 	);
-});
+};
 
 const mapStateToProps = (state) => {
 	return {

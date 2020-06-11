@@ -9,10 +9,7 @@ jest.mock('../store');
 const mockStore = configureStore([thunk]);
 
 describe('Fetching actions', () => {
-    /* afterEach(() => {
-        mockAxios.uninstall();
-    }); */
-    
+  
     it('should dispatch PENDING action', () => {
         const store = mockStore();
         store.dispatch(actions.requestAllProducts());
@@ -24,7 +21,6 @@ describe('Fetching actions', () => {
     it('should dispatch SUCCESS action',  async () => {
         const mockData = {phones: ['test phone'] };
         mockAxios.get.mockImplementationOnce(() => Promise.resolve({data: mockData}));
-
         const expectedPayload = [
             { type: types.REQUEST_PRODUCTS_PENDING },
             {
@@ -40,7 +36,6 @@ describe('Fetching actions', () => {
     it('should dispatch FAILURE action',  async () => {
         const mockData = new Error('Invalid JSON')
         mockAxios.get.mockImplementationOnce(() => Promise.reject(mockData));
-
         const expectedPayload = [
             { type: types.REQUEST_PRODUCTS_PENDING },
             {

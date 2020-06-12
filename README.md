@@ -166,3 +166,21 @@ For running the tests:
 cd /client
 npm run test
 ```
+
+#### Running Docker
+
+Frontend:
+
+```
+cd client
+docker build -t client .
+docker run -p 3000:3000 client
+```
+
+Backend:
+
+```
+cd server
+docker build -t server .
+docker run -p 4000:4000 server
+```

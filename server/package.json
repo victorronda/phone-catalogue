@@ -2,11 +2,7 @@
   "name": "phone-catalogue",
   "version": "1.0.0",
   "description": "Technical interview",
-<<<<<<< HEAD
-  "main": "server/app.js",
-=======
   "main": "app.js",
->>>>>>> 2d9b80cbe58ba4263d9a73d79b60ae924436adaa
   "scripts": {
     "server": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"

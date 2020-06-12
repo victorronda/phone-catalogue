@@ -9,7 +9,7 @@ const Product = ({ phone }) => {
 				<img className="card-img-top" src={phone.imageFileName} alt="phone" width="auto" height="280" />
 				<div className="card-body">
 					<h2 className="card-title">{phone.name}</h2>
-					<h3 lassName="card-subtitle">{phone.price} €</h3>
+					<h3 className="card-subtitle">{phone.price} €</h3>
 				</div>
 			</Link>
 		</div>
